@@ -1,0 +1,31 @@
+@mixin below($size) {
+    @media screen and (max-width: $size) {
+      @content
+    }
+}
+@mixin above($size) {
+    @media screen and (min-width: $size) {
+      @content
+    }
+}
+@mixin customScrollY($color: $yt_general_background_a) {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    &::-webkit-scrollbar {
+        width: 1rem;
+        @include below(720px) {
+            width: 0 !important;
+        }
+    }
+    &::-webkit-scrollbar-track {
+        background:  $color;
+    }
+
+    &::-webkit-scrollbar-thumb {
+        background: $yt_general_white_10percent;
+        border-radius: 50px;
+    }
+    &::-webkit-scrollbar-thumb:hover {
+        background: $yt_general_white_20percent;
+    }
+}
