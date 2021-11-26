@@ -4,7 +4,7 @@ import styles from '../styles/components.module.css'
 import Link from 'next/link'
 
 export default function Player({ data }: any) {
-    String.prototype.replaceAll = function(search, replacement) {
+    String.prototype.replaceAll = function(search: any, replacement: any) {
         var target = this;
         return target.replace(new RegExp(search, 'g'), replacement);
     };
@@ -22,7 +22,7 @@ export default function Player({ data }: any) {
         <div className={styles.container}>
             <div className={styles.mainContainer}>
                 <div className={styles.player}>
-                    <iframe width="560" height="315" src={`https://www.youtube.com/embed/${data.id.videoId}`} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen autoplay="1"></iframe>
+                    <iframe width="560" height="315" src={`https://www.youtube.com/embed/${data.id.videoId}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                 </div>
                 <div>
                     <div className={styles.meta}>

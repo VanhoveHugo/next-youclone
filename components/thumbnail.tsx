@@ -3,12 +3,8 @@ import * as React from 'react'
 import Link from 'next/link'
 import styles from '../styles/components.module.css'
 
-type Props = {
-    data: object 
-}
-
-export default function Thumbnail({ data }: Props) {
-    String.prototype.replaceAll = function(search, replacement) {
+export default function Thumbnail({ data }: any) {
+    String.prototype.replaceAll = function(search: any, replacement: any) {
         var target = this;
         return target.replace(new RegExp(search, 'g'), replacement);
     };

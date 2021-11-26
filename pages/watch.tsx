@@ -6,10 +6,9 @@ import _ from 'lodash'
 
 import Layout from '../components/layout'
 import Player from '../components/player'
-import { video } from '../utils/types'
 
-export default function Watch({ video }: video) {
-    String.prototype.replaceAll = function(search, replacement) {
+export default function Watch({ video }: any) {
+    String.prototype.replaceAll = function(search: any, replacement: any) {
         var target = this;
         return target.replace(new RegExp(search, 'g'), replacement);
     };

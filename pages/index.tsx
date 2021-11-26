@@ -6,7 +6,7 @@ import _ from 'lodash'
 import Layout from '../components/layout'
 import Thumbnail from '../components/thumbnail'
 
-import type { videosList, inc } from '../utils/types'
+import type { videosList } from '../utils/types'
 
 export default function Home({ videos }: videosList) {
   return (

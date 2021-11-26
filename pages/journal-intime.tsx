@@ -5,11 +5,8 @@ import _ from 'lodash'
 import styles from '../styles/components.module.css'
 
 import Layout from '../components/layout'
-import Thumbnail from '../components/thumbnail'
 
-import type { videosList, inc } from '../utils/types'
-
-export default function Home({ videos }: videosList) {
+export default function Home() {
   return (
     <>
       <Head>
