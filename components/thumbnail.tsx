@@ -18,7 +18,6 @@ export default function Thumbnail({ data }: any) {
         }
         return str;
     }
-    console.log(data)
     return (
         <article className={styles.VideoCard}>
             <Link href={`/watch?v=${data.id.videoId}`}>
