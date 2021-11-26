@@ -28,9 +28,7 @@ export default function Home({ videos }: videosList) {
 }
 
 export const getServerSideProps: GetServerSideProps = async (context) => {
-  const URL = context.req.headers.referer
-  const res = await fetch(`${URL}api/youtube`)
-  // https://youtube.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAcKJT4lmdaAa_8h7VXB6vetRg0kpHm5kQ&maxResults=24&type=video&regionCode=FR&&relevanceLanguage=FR
+  const res = await fetch(`https://youclone.vercel.app/api/youtube`)
   let data = await res.json()
 
   if (!data) {
