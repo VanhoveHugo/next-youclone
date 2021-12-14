@@ -37,6 +37,13 @@
   background: #181818;
 }
 
+@media screen and (max-width: 720px) {
+  .layout .frame {
+    padding: 0;
+    min-height: 100vh;
+  }
+}
+
 .navigation {
   position: -webkit-sticky;
   position: sticky;
@@ -172,6 +179,7 @@
 
 .navigation .circle {
   border-radius: 50%;
+  aspect-ratio: 1/1;
   height: 2.5rem;
   width: 2.5rem;
   margin-right: .5rem;

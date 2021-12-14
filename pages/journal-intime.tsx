@@ -19,28 +19,10 @@ export default function Home() {
           <h1>BRAVOS !!</h1>
           <img src={"https://gifsdomi.files.wordpress.com/2014/05/gif-animc3a9-drc3b4le-194.gif"} />
           <h2>tu as gagné le droit de me recruter....</h2>
+          <p>Je recherche un stage à partir du mois d'Avril pour une durée de 3 à 5 mois.</p>
           <a target="_blank" href="https://www.linkedin.com/in/hugo-code/">Mon linkedin</a>
         </div>
       </Layout>
     </>
   )
-}
-
-export const getServerSideProps: GetServerSideProps = async (context) => {
-  const res = await fetch(`http://localhost/api/youtube`)
-  // https://youtube.googleapis.com/youtube/v3/search?part=snippet&key=AIzaSyAcKJT4lmdaAa_8h7VXB6vetRg0kpHm5kQ&maxResults=24&type=video&regionCode=FR&&relevanceLanguage=FR
-  let data = await res.json()
-
-  if (!data) {
-    return {
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
-    }
-  }
-  let videos = data.items
-  return {
-    props: { videos },
-  }
 }

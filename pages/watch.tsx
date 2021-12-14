@@ -40,7 +40,7 @@ type Params = {
     params?: any
 }
 export const getServerSideProps: GetServerSideProps = async (context) => {
-    const res = await fetch(`http://localhost/api/youtube`)
+    const res = await fetch(`https://youclone.vercel.app/api/youtube`)
     let data = await res.json()
   
     if (!data) {
